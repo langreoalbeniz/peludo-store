@@ -1,0 +1,15 @@
+/* Peludo — Design tokens compartidos */
+:root {
+  --bg:#F9F6F1;--bg-alt:#F0EAE0;--bg-card:#FFFFFF;--fg:#1C1107;--fg-muted:#7A6A55;--fg-subtle:#B09A83;
+  --accent:#B87C1A;--accent-fg:#FFFFFF;--border:#E3D9CC;--hero-bg:#1C1107;--hero-fg:#F5EFE6;
+  --font-display:'Fraunces',Georgia,'Times New Roman',serif;--font-body:'DM Sans',system-ui,-apple-system,sans-serif;
+  --nav-h:64px;--r:6px;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1C1107;--bg-alt:#251A0C;--bg-card:#2D2010;--fg:#F5EFE6;--fg-muted:#A8947A;--fg-subtle:#6B5840;
+  --accent:#D49C35;--accent-fg:#1C1107;--border:#3A2A14;--hero-bg:#0E0905;--hero-fg:#F5EFE6;color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#1C1107;--bg-alt:#251A0C;--bg-card:#2D2010;--fg:#F5EFE6;--fg-muted:#A8947A;--fg-subtle:#6B5840;
+  --accent:#D49C35;--accent-fg:#1C1107;--border:#3A2A14;--hero-bg:#0E0905;--hero-fg:#F5EFE6;color-scheme:dark;
+}

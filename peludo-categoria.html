@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Collares y Correas — Peludo</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Compra collares y correas para perros de las mejores marcas europeas. Filtra por talla, marca y precio. Envío gratis desde 49 €.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300;1,9..144,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap">
+<style>
+:root{--bg:#F9F6F1;--bg-alt:#F0EAE0;--bg-card:#FFFFFF;--fg:#1C1107;--fg-muted:#7A6A55;--fg-subtle:#B09A83;--accent:#B87C1A;--accent-fg:#FFFFFF;--border:#E3D9CC;--hero-bg:#1C1107;--hero-fg:#F5EFE6;--font-display:'Fraunces',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--nav-h:64px;--r:6px;}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1C1107;--bg-alt:#251A0C;--bg-card:#2D2010;--fg:#F5EFE6;--fg-muted:#A8947A;--fg-subtle:#6B5840;--accent:#D49C35;--accent-fg:#1C1107;--border:#3A2A14;--hero-bg:#0E0905;--hero-fg:#F5EFE6;color-scheme:dark;}}
+:root[data-theme="dark"]{--bg:#1C1107;--bg-alt:#251A0C;--bg-card:#2D2010;--fg:#F5EFE6;--fg-muted:#A8947A;--fg-subtle:#6B5840;--accent:#D49C35;--accent-fg:#1C1107;--border:#3A2A14;--hero-bg:#0E0905;--hero-fg:#F5EFE6;color-scheme:dark;}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:15px;line-height:1.6;margin:0;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));}
+
+/* Nav */
+.announce{background:var(--hero-bg);color:var(--hero-fg);text-align:center;font-size:13px;font-weight:500;letter-spacing:.04em;padding-block:9px;}
+.announce a{color:var(--accent);text-decoration:none;margin-left:6px;}
+.nav-wrap{background:var(--bg);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;}
+nav{height:var(--nav-h);display:flex;align-items:center;gap:32px;}
+.nav-logo{font-family:var(--font-display);font-size:26px;font-weight:700;color:var(--fg);text-decoration:none;flex-shrink:0;}
+.nav-logo span{color:var(--accent);}
+.nav-links{display:flex;gap:28px;list-style:none;flex:1;}
+.nav-links a{color:var(--fg-muted);text-decoration:none;font-size:14px;font-weight:500;transition:color .15s;}
+.nav-links a:hover,.nav-links a.active{color:var(--fg);}
+.nav-links .link-regalos{color:var(--accent);font-weight:600;}
+.nav-actions{display:flex;align-items:center;gap:16px;margin-left:auto;}
+.nav-btn{background:var(--accent);color:var(--accent-fg);border:none;padding:9px 20px;border-radius:var(--r);font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:opacity .15s;}
+.nav-btn:hover{opacity:.85;}
+.icon-btn{background:none;border:none;cursor:pointer;color:var(--fg-muted);display:flex;align-items:center;padding:4px;position:relative;}
+.cart-badge{position:absolute;top:-2px;right:-4px;background:var(--accent);color:var(--accent-fg);font-size:10px;font-weight:700;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+
+/* Breadcrumb */
+.breadcrumb{padding-block:16px;border-bottom:1px solid var(--border);}
+.bc-list{display:flex;align-items:center;gap:8px;list-style:none;font-size:13px;color:var(--fg-muted);}
+.bc-list li+li::before{content:"›";opacity:.5;}
+.bc-list a{color:var(--fg-muted);text-decoration:none;}
+.bc-list a:hover{color:var(--fg);}
+.bc-list .current{color:var(--fg);font-weight:500;}
+
+/* Category hero */
+.cat-hero{background:var(--hero-bg);color:var(--hero-fg);padding-block:40px;}
+.cat-hero-inner{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;}
+.cat-hero h1{font-family:var(--font-display);font-size:clamp(28px,4vw,48px);font-weight:700;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px;}
+.cat-hero h1 em{font-style:italic;font-weight:300;color:var(--accent);}
+.cat-hero p{color:#A8947A;font-size:15px;max-width:480px;}
+.cat-hero-badge{background:rgba(184,124,26,.15);border:1px solid rgba(184,124,26,.3);border-radius:8px;padding:12px 20px;text-align:center;flex-shrink:0;}
+.cat-hero-badge .num{font-family:var(--font-display);font-size:36px;font-weight:700;color:var(--accent);display:block;line-height:1;}
+.cat-hero-badge small{font-size:12px;color:#A8947A;}
+
+/* Layout */
+.shop-layout{display:grid;grid-template-columns:260px 1fr;gap:32px;padding-block:32px;}
+@media(max-width:900px){.shop-layout{grid-template-columns:1fr;}}
+
+/* Sidebar */
+.sidebar{display:flex;flex-direction:column;gap:24px;}
+.filter-group{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+.filter-head{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;cursor:pointer;user-select:none;}
+.filter-head h3{font-size:14px;font-weight:600;}
+.filter-chevron{color:var(--fg-muted);transition:transform .2s;font-size:12px;}
+.filter-head.open .filter-chevron{transform:rotate(180deg);}
+.filter-body{padding:0 18px 16px;display:none;}
+.filter-body.open{display:block;}
+
+/* Size filter */
+.size-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:4px;}
+.size-btn{padding:8px 4px;border:1px solid var(--border);border-radius:6px;background:none;font-family:var(--font-body);font-size:13px;font-weight:500;cursor:pointer;color:var(--fg-muted);text-align:center;transition:all .15s;}
+.size-btn:hover{border-color:var(--accent);color:var(--fg);}
+.size-btn.active{background:var(--accent);border-color:var(--accent);color:var(--accent-fg);}
+.size-hint{font-size:11px;color:var(--fg-subtle);margin-top:8px;line-height:1.5;}
+
+/* Brand filter */
+.brand-list{display:flex;flex-direction:column;gap:8px;margin-top:4px;}
+.brand-check{display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px;color:var(--fg-muted);}
+.brand-check input{accent-color:var(--accent);width:14px;height:14px;cursor:pointer;}
+.brand-check:hover{color:var(--fg);}
+.brand-count{margin-left:auto;font-size:11px;color:var(--fg-subtle);}
+
+/* Price range */
+.price-row{display:flex;align-items:center;gap:8px;margin-top:8px;}
+.price-input{width:100%;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r);padding:8px 10px;font-family:var(--font-body);font-size:13px;color:var(--fg);outline:none;}
+.price-input:focus{border-color:var(--accent);}
+.price-sep{color:var(--fg-subtle);flex-shrink:0;}
+.apply-btn{width:100%;margin-top:10px;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r);padding:8px;font-family:var(--font-body);font-size:13px;font-weight:600;cursor:pointer;color:var(--fg);transition:all .15s;}
+.apply-btn:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-fg);}
+
+/* Eco toggle */
+.eco-toggle{display:flex;align-items:center;justify-content:space-between;margin-top:4px;}
+.eco-toggle label{font-size:13px;color:var(--fg-muted);display:flex;align-items:center;gap:8px;cursor:pointer;}
+.toggle-sw{position:relative;width:36px;height:20px;}
+.toggle-sw input{opacity:0;width:0;height:0;}
+.toggle-track{position:absolute;inset:0;background:var(--border);border-radius:10px;transition:background .2s;}
+.toggle-thumb{position:absolute;top:3px;left:3px;width:14px;height:14px;background:#fff;border-radius:50%;transition:transform .2s;box-shadow:0 1px 3px rgba(0,0,0,.15);}
+.toggle-sw input:checked + .toggle-track{background:#1E8449;}
+.toggle-sw input:checked ~ .toggle-thumb{transform:translateX(16px);}
+
+/* Active filters */
+.active-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+.filter-tag{display:flex;align-items:center;gap:6px;background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:12px;font-weight:500;color:var(--fg-muted);}
+.filter-tag button{background:none;border:none;cursor:pointer;color:var(--fg-subtle);font-size:14px;line-height:1;padding:0;display:flex;}
+.filter-tag button:hover{color:var(--fg);}
+
+/* Toolbar */
+.shop-toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px;}
+.results-count{font-size:14px;color:var(--fg-muted);}
+.results-count strong{color:var(--fg);}
+.toolbar-right{display:flex;align-items:center;gap:12px;}
+.sort-select{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:8px 12px;font-family:var(--font-body);font-size:13px;color:var(--fg);cursor:pointer;outline:none;}
+.sort-select:focus{border-color:var(--accent);}
+.view-btns{display:flex;gap:4px;}
+.view-btn{background:none;border:1px solid var(--border);border-radius:var(--r);padding:8px 10px;cursor:pointer;color:var(--fg-muted);transition:all .15s;}
+.view-btn.active,.view-btn:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-fg);}
+
+/* Product grid */
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.products-grid.list-view{grid-template-columns:1fr;}
+.product-card{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:box-shadow .2s,transform .2s;text-decoration:none;color:inherit;display:block;}
+.product-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.1);transform:translateY(-2px);}
+.products-grid.list-view .product-card{display:flex;flex-direction:row;}
+.products-grid.list-view .product-img{width:180px;flex-shrink:0;}
+.product-img{aspect-ratio:1;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.p1 .product-img{background:#F5ECD8;} .p2 .product-img{background:#DCE8F0;} .p3 .product-img{background:#EDE8F5;}
+.p4 .product-img{background:#DCF0E4;} .p5 .product-img{background:#F5DEDE;} .p6 .product-img{background:#F5F0D8;}
+.product-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.p7 .product-img{background:#D8EDF5;} .p8 .product-img{background:#F0EDD8;} .p9 .product-img{background:#EDF0D8;}
+.product-badge{position:absolute;top:12px;left:12px;font-size:11px;font-weight:600;padding:3px 8px;border-radius:4px;letter-spacing:.03em;}
+.badge-new{background:var(--accent);color:var(--accent-fg);}
+.badge-sale{background:#C0392B;color:#fff;}
+.badge-eco{background:#1E8449;color:#fff;}
+.product-wishlist{position:absolute;top:10px;right:10px;background:var(--bg-card);border:1px solid var(--border);border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;cursor:pointer;}
+.product-card:hover .product-wishlist{opacity:1;}
+.product-info{padding:14px 16px 16px;flex:1;min-width:0;}
+.product-brand{font-size:11px;color:var(--fg-subtle);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;}
+.product-name{font-size:14px;font-weight:500;line-height:1.4;margin-bottom:8px;color:var(--fg);}
+.product-stars{display:flex;align-items:center;gap:4px;margin-bottom:6px;}
+.stars{color:var(--accent);font-size:12px;letter-spacing:1px;}
+.review-count{font-size:12px;color:var(--fg-subtle);}
+.stock-urgency{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#C0392B;margin-bottom:8px;}
+.stock-dot{width:7px;height:7px;border-radius:50%;background:#C0392B;flex-shrink:0;animation:blink 1.6s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
+.product-price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;}
+.price-now{font-size:17px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--fg);}
+.price-was{font-size:13px;color:var(--fg-subtle);text-decoration:line-through;}
+.price-save{font-size:12px;font-weight:600;color:#C0392B;}
+.product-add{width:100%;margin-top:12px;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r);padding:9px;font-family:var(--font-body);font-size:13px;font-weight:600;cursor:pointer;color:var(--fg);transition:background .15s,border-color .15s,color .15s;}
+.product-add:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-fg);}
+
+/* Size tags on card */
+.size-tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px;}
+.size-tag{font-size:10px;font-weight:600;background:var(--bg-alt);border:1px solid var(--border);border-radius:4px;padding:2px 6px;color:var(--fg-muted);}
+
+/* Pagination */
+.pagination{display:flex;justify-content:center;align-items:center;gap:8px;padding-block:40px;}
+.page-btn{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);width:38px;height:38px;display:flex;align-items:center;justify-content:center;font-size:14px;cursor:pointer;color:var(--fg-muted);font-family:var(--font-body);transition:all .15s;}
+.page-btn:hover,.page-btn.active{background:var(--accent);border-color:var(--accent);color:var(--accent-fg);}
+.page-btn.prev,.page-btn.next{width:auto;padding:0 14px;font-size:13px;font-weight:500;}
+
+/* Footer minimal */
+footer{background:var(--hero-bg);border-top:1px solid #2A1E0E;color:#7A6A55;padding-block:24px;text-align:center;font-size:13px;}
+footer a{color:var(--accent);text-decoration:none;}
+
+/* Mobile sidebar */
+.filter-toggle-mobile{display:none;width:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:12px 16px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer;color:var(--fg);text-align:left;align-items:center;justify-content:space-between;}
+@media(max-width:900px){.filter-toggle-mobile{display:flex;}.sidebar{display:none;}.sidebar.mobile-open{display:flex;}.products-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.products-grid{grid-template-columns:1fr;}}
+body{background:var(--bg);color:var(--fg);}
+</style>
+</head>
+<body>
+
+<div class="announce"><div class="wrap">Envío gratis en pedidos superiores a 49 € · Más de 2.000 productos disponibles con <a href="index.html">BigBuy</a></div></div>
+<div class="nav-wrap">
+  <nav class="wrap">
+    <a class="nav-logo" href="index.html"><span>●</span> Peludo</a>
+    <ul class="nav-links">
+      <li><a href="peludo-categoria.html" class="active">Collares</a></li>
+      <li><a href="peludo-categoria.html">Arneses</a></li>
+      <li><a href="peludo-categoria.html">Camas</a></li>
+      <li><a href="peludo-categoria.html">Juguetes</a></li>
+      <li><a href="peludo-categoria.html">Alimentación</a></li>
+      <li><a href="peludo-categoria.html" class="link-regalos">Regalos</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="Buscar"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg></button>
+      <button class="icon-btn" aria-label="Carrito"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-badge">0</span></button>
+      <a class="nav-btn" href="#">Iniciar sesión</a>
+    </div>
+  </nav>
+</div>
+
+<div class="breadcrumb"><div class="wrap">
+  <ul class="bc-list">
+    <li><a href="index.html">Inicio</a></li>
+    <li class="current">Collares y Correas</li>
+  </ul>
+</div></div>
+
+<div class="cat-hero"><div class="wrap">
+  <div class="cat-hero-inner">
+    <div>
+      <h1>Collares y <em>Correas</em></h1>
+      <p>Collares ajustables, correas retráctiles y arneses de marcas europeas. Materiales resistentes y seguros para cada raza y tamaño.</p>
+    </div>
+    <div class="cat-hero-badge"><span class="num">143</span><small>productos disponibles</small></div>
+  </div>
+</div></div>
+
+<main><div class="wrap">
+  <div class="shop-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <!-- Talla -->
+      <div class="filter-group">
+        <div class="filter-head open" onclick="toggleFilter(this)">
+          <h3>Talla del perro</h3><span class="filter-chevron">▼</span>
+        </div>
+        <div class="filter-body open">
+          <div class="size-grid">
+            <button class="size-btn" onclick="toggleSize(this)">XS<br><small style="font-size:9px;opacity:.7;">hasta 5 kg</small></button>
+            <button class="size-btn active" onclick="toggleSize(this)">S<br><small style="font-size:9px;opacity:.7;">5–10 kg</small></button>
+            <button class="size-btn" onclick="toggleSize(this)">M<br><small style="font-size:9px;opacity:.7;">10–20 kg</small></button>
+            <button class="size-btn" onclick="toggleSize(this)">L<br><small style="font-size:9px;opacity:.7;">20–35 kg</small></button>
+            <button class="size-btn" onclick="toggleSize(this)">XL<br><small style="font-size:9px;opacity:.7;">35–50 kg</small></button>
+            <button class="size-btn" onclick="toggleSize(this)">Gigante<br><small style="font-size:9px;opacity:.7;">+50 kg</small></button>
+          </div>
+          <p class="size-hint">¿No sabes la talla? <a href="#" style="color:var(--accent)">Ver guía de tallas →</a></p>
+        </div>
+      </div>
+
+      <!-- Marca -->
+      <div class="filter-group">
+        <div class="filter-head open" onclick="toggleFilter(this)">
+          <h3>Marca</h3><span class="filter-chevron">▼</span>
+        </div>
+        <div class="filter-body open">
+          <div class="brand-list">
+            <label class="brand-check"><input type="checkbox" checked onchange="updateFilters()"> Zolia <span class="brand-count">34</span></label>
+            <label class="brand-check"><input type="checkbox" onchange="updateFilters()"> Freedog <span class="brand-count">28</span></label>
+            <label class="brand-check"><input type="checkbox" onchange="updateFilters()"> Flexi <span class="brand-count">19</span></label>
+            <label class="brand-check"><input type="checkbox" onchange="updateFilters()"> Trixie <span class="brand-count">24</span></label>
+            <label class="brand-check"><input type="checkbox" onchange="updateFilters()"> Kerbl <span class="brand-count">15</span></label>
+            <label class="brand-check"><input type="checkbox" onchange="updateFilters()"> Hobbydog <span class="brand-count">12</span></label>
+            <label class="brand-check"><input type="checkbox" onchange="updateFilters()"> Kong <span class="brand-count">11</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Precio -->
+      <div class="filter-group">
+        <div class="filter-head open" onclick="toggleFilter(this)">
+          <h3>Precio</h3><span class="filter-chevron">▼</span>
+        </div>
+        <div class="filter-body open">
+          <div class="price-row">
+            <input class="price-input" type="number" placeholder="Mín." value="0" min="0">
+            <span class="price-sep">—</span>
+            <input class="price-input" type="number" placeholder="Máx." value="100" min="0">
+          </div>
+          <button class="apply-btn" onclick="updateFilters()">Aplicar precio</button>
+        </div>
+      </div>
+
+      <!-- Eco -->
+      <div class="filter-group">
+        <div class="filter-head open" onclick="toggleFilter(this)">
+          <h3>Sostenibilidad</h3><span class="filter-chevron">▼</span>
+        </div>
+        <div class="filter-body open">
+          <div class="eco-toggle">
+            <label style="font-size:13px;color:var(--fg-muted);display:flex;align-items:center;gap:10px;cursor:pointer;">
+              Solo productos Eco/Sostenibles
+              <label class="toggle-sw">
+                <input type="checkbox" id="eco-filter" onchange="updateFilters()">
+                <span class="toggle-track"></span>
+                <span class="toggle-thumb"></span>
+              </label>
+            </label>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Products -->
+    <div>
+      <button class="filter-toggle-mobile" onclick="toggleMobileSidebar()">
+        <span>Filtros</span>
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      </button>
+
+      <div class="active-filters">
+        <span class="filter-tag">Talla: S <button onclick="this.parentElement.remove()" aria-label="Eliminar filtro">×</button></span>
+        <span class="filter-tag">Marca: Zolia <button onclick="this.parentElement.remove()" aria-label="Eliminar filtro">×</button></span>
+      </div>
+
+      <div class="shop-toolbar">
+        <p class="results-count"><strong>48</strong> productos encontrados</p>
+        <div class="toolbar-right">
+          <select class="sort-select">
+            <option>Más vendidos</option>
+            <option>Precio: menor a mayor</option>
+            <option>Precio: mayor a menor</option>
+            <option>Novedades</option>
+            <option>Mejor valorados</option>
+          </select>
+          <div class="view-btns">
+            <button class="view-btn active" onclick="setView('grid',this)" aria-label="Vista cuadrícula"><svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><rect x="0" y="0" width="6" height="6"/><rect x="10" y="0" width="6" height="6"/><rect x="0" y="10" width="6" height="6"/><rect x="10" y="10" width="6" height="6"/></svg></button>
+            <button class="view-btn" onclick="setView('list',this)" aria-label="Vista lista"><svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><rect x="0" y="0" width="16" height="3"/><rect x="0" y="6" width="16" height="3"/><rect x="0" y="12" width="16" height="3"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="products-grid" id="products-grid">
+
+        <a class="product-card p1" href="peludo-producto.html">
+          <div class="product-img"><span class="product-badge badge-new">Nuevo</span><button class="product-wishlist" onclick="return false" aria-label="Guardar">♡</button><img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=400&h=400&fit=crop&auto=format&q=80" alt="Collar de nylon ajustable" loading="lazy"></div>
+          <div class="product-info">
+            <p class="product-brand">Zolia · BigBuy</p>
+            <p class="product-name">Collar de nylon ajustable con hebilla de seguridad</p>
+            <div class="product-stars"><span class="stars">★★★★★</span><span class="review-count">(142)</span></div>
+            <div class="size-tags"><span class="size-tag">XS</span><span class="size-tag">S</span><span class="size-tag">M</span><span class="size-tag">L</span></div>
+            <div class="stock-urgency"><span class="stock-dot"></span>Solo quedan 6 unidades</div>
+            <div class="product-price"><span class="price-now">14,99 €</span></div>
+            <button class="product-add" onclick="return false">Añadir al carrito</button>
+          </div>
+        </a>
+
+        <a class="product-card p2" href="peludo-producto.html">
+          <div class="product-img"><span class="product-badge badge-sale">−25%</span><button class="product-wishlist" onclick="return false" aria-label="Guardar">♡</button><img src="https://images.unsplash.com/photo-1580459476964-822a39c5697e?w=400&h=400&fit=crop&auto=format&q=80" alt="Arnés reflectante" loading="lazy"></div>
+          <div class="product-info">
+            <p class="product-brand">Freedog · BigBuy</p>
+            <p class="product-name">Arnés reflectante antipull para paseos nocturnos</p>
+            <div class="product-stars"><span class="stars">★★★★½</span><span class="review-count">(88)</span></div>
+            <div class="size-tags"><span class="size-tag">S</span><span class="size-tag">M</span><span class="size-tag">L</span><span class="size-tag">XL</span></div>
+            <div class="product-price"><span class="price-now">26,99 €</span><span class="price-was">35,99 €</span><span class="price-save">−25%</span></div>
+            <button class="product-add" onclick="return false">Añadir al carrito</button>
+          </div>
+        </a>
+
+        <a class="product-card p3" href="peludo-producto.html">
+          <div class="product-img"><span class="product-badge badge-eco">Eco</span><button class="product-wishlist" onclick="return false" aria-label="Guardar">♡</button><img src="https://images.unsplash.com/photo-1581888227599-779811939961?w=400&h=400&fit=crop&auto=format&q=80" alt="Cama ortopédica" loading="lazy"></div>
+          <div class="product-info">
+            <p class="product-brand">Trixie · BigBuy</p>
+            <p class="product-name">Collar ecológico de cáñamo natural con cierre de madera</p>
+            <div class="product-stars"><span class="stars">★★★★★</span><span class="review-count">(67)</span></div>
+            <div class="size-tags"><span class="size-tag">XS</span><span class="size-tag">S</span><span class="size-tag">M</span></div>
+            <div class="product-price"><span class="price-now">18,99 €</span></div>
+            <button class="product-add" onclick="return false">Añadir al carrito</button>
+          </div>
+        </a>
+
+        <a class="product-card p4" href="peludo-producto.html">
+          <div class="product-img"><button class="product-wishlist" onclick="return false" aria-label="Guardar">♡</button><img src="https://images.unsplash.com/photo-1530700131180-d43d9b8cc41f?w=400&h=400&fit=crop&auto=format&q=80" alt="Correa retráctil" loading="lazy"></div>
+          <div class="product-info">
+            <p class="product-brand">Flexi · BigBuy</p>
+            <p class="product-name">Correa retráctil 5 m con freno y bloqueo automático</p>
+            <div class="product-stars"><span class="stars">★★★★★</span><span class="review-count">(124)</span></div>
+            <div class="size-tags"><span class="size-tag">S</span><span class="size-tag">M</span><span class="size-tag">L</span></div>
+            <div class="stock-urgency"><span class="stock-dot"></span>Solo quedan 8 unidades</div>
+            <div class="product-price"><span class="price-now">18,99 €</span></div>
+            <button class="product-add" onclick="return false">Añadir al carrito</button>
+          </div>
+        </a>
+
+        <a class="product-card p5" href="peludo-producto.html">
+          <div class="product-img"><span class="product-badge badge-new">Nuevo</span><button class="product-wishlist" onclick="return false" aria-label="Guardar">♡</button><img src="https://images.unsplash.com/photo-1591946614720-90a587da4a36?w=400&h=400&fit=crop&auto=format&q=80" alt="Juguete Kong" loading="lazy"></div>
+          <div class="product-info">
+            <p class="product-brand">Kong · BigBuy</p>
+            <p class="product-name">Collar martingala de nylon para adiestramiento</p>
+            <div class="product-stars"><span class="stars">★★★★½</span><span class="review-count">(43)</span></div>
+            <div class="size-tags"><span class="size-tag">S</span><span class="size-tag">M</span><span class="size-tag">L</span><span class="size-tag">XL</span></div>
+            <div class="product-price"><span class="price-now">12,99 €</span></div>
+            <button class="product-add" onclick="return false">Añadir al carrito</button>
+          </div>
+        </a>
+
+        <a class="product-card p6" href="peludo-producto.html">
+          <div class="product-img"><span class="product-badge badge-sale">−15%</span><button class="product-wishlist" onclick="return false" aria-label="Guardar">♡</button><img src="https://images.unsplash.com/photo-1530041539828-114de669390e?w=400&h=400&fit=crop&auto=format&q=80" alt="Impermeable acolchado" loading="lazy"></div>
+          <div class="product-info">
+            <p class="product-brand">Kerbl · BigBuy</p>
+            <p class="product-name">Correa bungee amortiguadora para jogging y deporte</p>
+            <div class="product-stars"><span class="stars">★★★★★</span><span class="review-count">(76)</span></div>
+            <div class="size-tags"><span class="size-tag">M</span><span class="size-tag">L</span><span class="size-tag">XL</span></div>
+            <div class="product-price"><span class="price-now">22,09 €</span><span class="price-was">25,99 €</span><span class="price-save">−15%</span></div>
+            <button class="product-add" onclick="return false">Añadir al carrito</button>
+          </div>
+        </a>
+
+      </div>
+
+      <nav class="pagination" aria-label="Paginación">
+        <button class="page-btn prev">← Anterior</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn" onclick="this.classList.add('active');document.querySelector('.page-btn.active:not(this)')?.classList.remove('active')">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">4</button>
+        <button class="page-btn next">Siguiente →</button>
+      </nav>
+    </div>
+  </div>
+</div></main>
+
+<footer><div class="wrap">© 2024 <a href="index.html">Peludo</a> — Accesorios premium para perros · Integrado con BigBuy.eu</div></footer>
+
+<script>
+function toggleFilter(head) {
+  head.classList.toggle('open');
+  const body = head.nextElementSibling;
+  body.classList.toggle('open');
+}
+function toggleSize(btn) {
+  btn.classList.toggle('active');
+  updateFilters();
+}
+function updateFilters() {
+  const active = [...document.querySelectorAll('.size-btn.active')].map(b => b.textContent.split('\n')[0]);
+  const brands = [...document.querySelectorAll('.brand-check input:checked')].map(i => i.parentElement.textContent.trim().split(/\s+/)[0]);
+  const eco = document.getElementById('eco-filter')?.checked;
+  const tags = document.querySelector('.active-filters');
+  tags.innerHTML = active.map(s => `<span class="filter-tag">Talla: ${s} <button onclick="this.parentElement.remove()" aria-label="Eliminar filtro">×</button></span>`).join('')
+    + brands.map(b => `<span class="filter-tag">Marca: ${b} <button onclick="this.parentElement.remove()" aria-label="Eliminar filtro">×</button></span>`).join('')
+    + (eco ? '<span class="filter-tag">Eco ✓ <button onclick="this.parentElement.remove()" aria-label="Eliminar filtro">×</button></span>' : '');
+}
+function setView(type, btn) {
+  document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const grid = document.getElementById('products-grid');
+  if (type === 'list') grid.classList.add('list-view');
+  else grid.classList.remove('list-view');
+}
+function toggleMobileSidebar() {
+  document.getElementById('sidebar').classList.toggle('mobile-open');
+}
+// Pagination active state
+document.querySelectorAll('.page-btn:not(.prev):not(.next)').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.page-btn.active').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+</script>
+</body></html>
