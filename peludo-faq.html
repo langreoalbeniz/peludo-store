@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Preguntas Frecuentes — Peludo</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap">
+<link rel="stylesheet" href="peludo-tokens.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);background:var(--bg);color:var(--fg);line-height:1.7;font-size:16px;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.nav-wrap{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--border);}
+.nav{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;gap:24px;}
+.nav-logo{font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--fg);text-decoration:none;display:flex;align-items:center;gap:6px;}
+.nav-logo span{color:var(--accent);}
+.nav-links{display:flex;gap:20px;margin-left:auto;}
+.nav-links a{font-size:14px;color:var(--fg-muted);text-decoration:none;}
+.nav-links a:hover{color:var(--fg);}
+.page-hero{background:var(--bg-alt);border-bottom:1px solid var(--border);padding:48px 24px 40px;text-align:center;}
+.page-hero h1{font-family:var(--font-display);font-size:clamp(28px,5vw,42px);font-weight:700;line-height:1.2;margin-bottom:12px;}
+.page-hero p{color:var(--fg-muted);font-size:15px;max-width:480px;margin:0 auto 24px;}
+.search-bar{max-width:440px;margin:0 auto;position:relative;}
+.search-bar input{width:100%;padding:12px 48px 12px 16px;border:1px solid var(--border);border-radius:24px;font-size:15px;font-family:var(--font-body);background:var(--bg-card);color:var(--fg);}
+.search-bar input:focus{outline:2px solid var(--accent);border-color:transparent;}
+.search-bar span{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:18px;}
+.layout{max-width:960px;margin:0 auto;padding:48px 24px 80px;display:grid;grid-template-columns:220px 1fr;gap:48px;align-items:start;}
+@media(max-width:700px){.layout{grid-template-columns:1fr;}.sidebar{display:none;}}
+.sidebar{position:sticky;top:88px;}
+.sidebar h3{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--fg-subtle);margin-bottom:12px;}
+.sidebar ul{list-style:none;}
+.sidebar ul li{margin-bottom:4px;}
+.sidebar ul li a{font-size:14px;color:var(--fg-muted);text-decoration:none;display:block;padding:4px 0;}
+.sidebar ul li a:hover,.sidebar ul li a.active{color:var(--accent);}
+.faq-section{margin-bottom:48px;}
+.faq-section h2{font-family:var(--font-display);font-size:22px;font-weight:700;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border);}
+.faq-item{border:1px solid var(--border);border-radius:var(--r);margin-bottom:8px;overflow:hidden;}
+.faq-q{width:100%;background:none;border:none;padding:16px 20px;text-align:left;font-family:var(--font-body);font-size:15px;font-weight:500;color:var(--fg);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.faq-q:hover{background:var(--bg-alt);}
+.faq-q .icon{font-size:18px;color:var(--fg-muted);transition:transform .2s;flex-shrink:0;}
+.faq-q.open .icon{transform:rotate(45deg);}
+.faq-a{display:none;padding:0 20px 16px;color:var(--fg-muted);font-size:15px;}
+.faq-a.open{display:block;}
+.faq-a p{margin-bottom:10px;}
+.faq-a p:last-child{margin:0;}
+.size-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px;}
+.size-table th{background:var(--bg-alt);padding:8px 12px;text-align:left;font-weight:600;border:1px solid var(--border);}
+.size-table td{padding:8px 12px;border:1px solid var(--border);color:var(--fg-muted);}
+.cta-block{background:var(--accent);border-radius:var(--r);padding:32px;text-align:center;margin-top:24px;}
+.cta-block h3{font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--accent-fg);margin-bottom:8px;}
+.cta-block p{color:var(--accent-fg);opacity:.9;margin-bottom:20px;font-size:15px;}
+.cta-block a{display:inline-block;background:var(--accent-fg);color:var(--accent);padding:10px 24px;border-radius:var(--r);font-weight:600;text-decoration:none;}
+footer{background:var(--fg);color:var(--bg);padding:32px 24px;text-align:center;font-size:13px;}
+footer a{color:var(--accent);text-decoration:none;}
+</style>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav class="nav">
+    <a class="nav-logo" href="index.html"><span>●</span> Peludo</a>
+    <div class="nav-links">
+      <a href="peludo-devoluciones.html">Devoluciones</a>
+      <a href="peludo-contacto.html">Contacto</a>
+    </div>
+  </nav>
+</div>
+
+<div class="page-hero">
+  <h1>¿En qué podemos ayudarte?</h1>
+  <p>Encuentra respuestas a las preguntas más frecuentes sobre pedidos, envíos y productos.</p>
+  <div class="search-bar">
+    <input type="text" id="faq-search" placeholder="Busca tu pregunta..." oninput="filterFaq(this.value)">
+    <span>🔍</span>
+  </div>
+</div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h3>Categorías</h3>
+    <ul>
+      <li><a href="#pedidos" class="active">Pedidos y pago</a></li>
+      <li><a href="#envios">Envíos</a></li>
+      <li><a href="#devoluciones">Devoluciones</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#tallas">Guía de tallas</a></li>
+      <li><a href="#cuenta">Mi cuenta</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <section class="faq-section" id="pedidos">
+      <h2>📦 Pedidos y pago</h2>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Cómo puedo realizar un pedido? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Selecciona los productos que te interesen, añádelos al carrito y sigue el proceso de pago. Necesitarás indicar una dirección de entrega y elegir un método de pago. En menos de 5 minutos recibirás la confirmación por email.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Qué métodos de pago aceptáis? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Aceptamos tarjeta de crédito/débito (Visa, Mastercard, Amex), PayPal, Bizum y transferencia bancaria. Todos los pagos con tarjeta se procesan de forma segura a través de Stripe (certificación PCI DSS nivel 1).</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Puedo modificar o cancelar mi pedido? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Sí, puedes modificar o cancelar tu pedido hasta que recibas el email de «Pedido enviado». Una vez enviado, ya no es posible la cancelación, aunque puedes iniciar una devolución cuando lo recibas. Contacta con nosotros lo antes posible en <a href="mailto:hola@peludo.es">hola@peludo.es</a>.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Cómo aplico un cupón de descuento? <span class="icon">+</span></button>
+        <div class="faq-a"><p>En el paso «Carrito» del proceso de compra encontrarás un campo para introducir el código del cupón. Los cupones activos son: <strong>BIENVENIDA10</strong> (10% en tu primera compra) y <strong>PELUDO10</strong> (10% general). Solo es posible usar un cupón por pedido.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">No he recibido el email de confirmación. ¿Qué hago? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Revisa la carpeta de spam. Si no aparece, espera 10 minutos y vuelve a comprobar. Si el problema persiste, contacta con nosotros en <a href="mailto:hola@peludo.es">hola@peludo.es</a> indicando el email con el que hiciste el pedido.</p></div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="envios">
+      <h2>🚚 Envíos</h2>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Cuánto tarda en llegar mi pedido? <span class="icon">+</span></button>
+        <div class="faq-a"><p>El envío estándar tarda entre 3 y 5 días hábiles. Si eliges envío express DHL, la entrega es al día siguiente para pedidos confirmados antes de las 13:00 h en días hábiles.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿El envío es gratuito? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Sí, el envío estándar es gratuito en pedidos de 49 € o más. Para pedidos menores, el coste es de 4,99 €. El envío express (DHL 24h) cuesta 9,99 € independientemente del importe.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Cómo puedo seguir mi pedido? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Recibirás un email con el número de seguimiento cuando el pedido salga de nuestro almacén. También puedes consultar el estado en nuestra página de <a href="peludo-devoluciones.html">seguimiento de pedidos</a>.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Enviáis a Canarias, Ceuta y Melilla? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Sí, enviamos a todo el territorio nacional. Para estas zonas se aplican tarifas y plazos especiales (7–10 días hábiles). Los costes exactos se calculan automáticamente al introducir la dirección en el checkout.</p></div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="devoluciones">
+      <h2>↩ Devoluciones</h2>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Cuántos días tengo para devolver un producto? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Tienes <strong>30 días naturales</strong> desde la recepción del pedido para solicitar una devolución, sin necesidad de justificación. Consulta nuestra <a href="peludo-devoluciones.html">guía de devoluciones</a> para ver el proceso paso a paso.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Cuándo recibiré el reembolso? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Una vez que el almacén recibe e inspecciona el artículo (24–48h), procesamos el reembolso inmediatamente. El tiempo hasta que aparece en tu cuenta depende de tu entidad bancaria: entre 3 y 10 días hábiles con tarjeta, 1–2 días con PayPal.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">He recibido un artículo defectuoso. ¿Qué hago? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Lo sentimos mucho. Envíanos un email a <a href="mailto:devoluciones@peludo.es">devoluciones@peludo.es</a> con el número de pedido y fotografías del defecto. Te enviaremos un artículo de sustitución sin coste o realizaremos el reembolso completo, a tu elección.</p></div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="productos">
+      <h2>🐾 Productos</h2>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿De dónde provienen los productos? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Trabajamos con <a href="https://www.bigbuy.eu" target="_blank">BigBuy Europe</a>, uno de los mayoristas más grandes de Europa, que nos permite ofrecer más de 2.000 referencias de marcas líderes en accesorios para mascotas. Todos los productos cumplen con la normativa europea de seguridad.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Los productos son seguros para perros? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Sí. Todos los productos de nuestra tienda cumplen con la normativa europea de seguridad para mascotas y están fabricados con materiales no tóxicos. En la ficha de cada producto encontrarás las especificaciones técnicas y el rango de peso/talla recomendado.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Tenéis productos de alimentación? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Sí, ofrecemos una selección de snacks, premios y suplementos para perros. Los alimentos completos (pienso) no están disponibles actualmente pero los incorporaremos próximamente. Consulta nuestra <a href="peludo-categoria.html">sección de alimentación</a>.</p></div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="tallas">
+      <h2>📏 Guía de tallas</h2>
+      <p style="color:var(--fg-muted);margin-bottom:20px;">Mide a tu perro con una cinta métrica flexible. Para collares y arneses, mide el contorno del cuello y el pecho (la parte más ancha, detrás de las patas delanteras).</p>
+
+      <h3>Collares</h3>
+      <table class="size-table">
+        <tr><th>Talla</th><th>Contorno de cuello</th><th>Razas orientativas</th></tr>
+        <tr><td>XS</td><td>20–28 cm</td><td>Chihuahua, Yorkshire Terrier</td></tr>
+        <tr><td>S</td><td>28–36 cm</td><td>Beagle, Cocker Spaniel</td></tr>
+        <tr><td>M</td><td>36–46 cm</td><td>Border Collie, Labrador (junior)</td></tr>
+        <tr><td>L</td><td>46–58 cm</td><td>Labrador, Golden Retriever</td></tr>
+        <tr><td>XL</td><td>58–70 cm</td><td>Pastor Alemán, Rottweiler</td></tr>
+      </table>
+
+      <h3>Arneses</h3>
+      <table class="size-table">
+        <tr><th>Talla</th><th>Contorno de pecho</th><th>Peso aprox.</th></tr>
+        <tr><td>XS</td><td>30–40 cm</td><td>1–5 kg</td></tr>
+        <tr><td>S</td><td>40–52 cm</td><td>5–10 kg</td></tr>
+        <tr><td>M</td><td>52–65 cm</td><td>10–20 kg</td></tr>
+        <tr><td>L</td><td>65–80 cm</td><td>20–35 kg</td></tr>
+        <tr><td>XL</td><td>80–100 cm</td><td>35–60 kg</td></tr>
+      </table>
+
+      <h3>Camas</h3>
+      <table class="size-table">
+        <tr><th>Talla</th><th>Dimensiones</th><th>Para perros de hasta</th></tr>
+        <tr><td>S</td><td>55 × 45 cm</td><td>8 kg</td></tr>
+        <tr><td>M</td><td>75 × 60 cm</td><td>20 kg</td></tr>
+        <tr><td>L</td><td>100 × 75 cm</td><td>40 kg</td></tr>
+        <tr><td>XL</td><td>120 × 90 cm</td><td>60 kg</td></tr>
+      </table>
+      <p style="color:var(--fg-subtle);font-size:13px;margin-top:8px;">Si tu perro está entre dos tallas, elige la mayor. ¿Tienes dudas? <a href="peludo-contacto.html">Contacta con nosotros</a> y te asesoramos.</p>
+    </section>
+
+    <section class="faq-section" id="cuenta">
+      <h2>👤 Mi cuenta</h2>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Es necesario crear una cuenta para comprar? <span class="icon">+</span></button>
+        <div class="faq-a"><p>No, puedes comprar como invitado sin crear una cuenta. Sin embargo, con una cuenta podrás ver el historial de tus pedidos, guardar direcciones de envío y acumular Peludo Points.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">¿Qué son los Peludo Points? <span class="icon">+</span></button>
+        <div class="faq-a"><p>Es nuestro programa de fidelidad. Por cada euro gastado acumulas 1 Peludo Point. Cada 100 puntos equivalen a 1 € de descuento en tu próximo pedido. Los puntos no caducan mientras tengas al menos una compra en los últimos 12 meses.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">He olvidado mi contraseña. ¿Cómo la recupero? <span class="icon">+</span></button>
+        <div class="faq-a"><p>En la pantalla de inicio de sesión, haz clic en «¿Olvidaste tu contraseña?» e introduce tu email. Te enviaremos un enlace para restablecerla. El enlace es válido durante 24 horas.</p></div>
+      </div>
+    </section>
+
+    <div class="cta-block">
+      <h3>¿No encontraste tu respuesta?</h3>
+      <p>Nuestro equipo te responde en menos de 24 horas.</p>
+      <a href="peludo-contacto.html">Contactar con soporte →</a>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p>© 2024 Peludo ·
+    <a href="peludo-privacidad.html">Privacidad</a> ·
+    <a href="peludo-terminos.html">Términos</a> ·
+    <a href="peludo-contacto.html">Contacto</a>
+  </p>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  const ans = btn.nextElementSibling;
+  const isOpen = ans.classList.contains('open');
+  btn.classList.toggle('open', !isOpen);
+  ans.classList.toggle('open', !isOpen);
+}
+
+function filterFaq(q) {
+  const term = q.toLowerCase();
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const text = item.textContent.toLowerCase();
+    item.style.display = text.includes(term) ? '' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>

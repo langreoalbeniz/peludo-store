@@ -205,7 +205,7 @@ body{background:var(--bg);color:var(--fg);}
     <div class="nav-actions">
       <button class="icon-btn" aria-label="Buscar"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg></button>
       <button class="icon-btn" aria-label="Carrito"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-badge" id="cart-count">0</span></button>
-      <a class="nav-btn" href="#">Iniciar sesión</a>
+      <a class="nav-btn" href="peludo-contacto.html">Mi cuenta</a>
     </div>
   </nav>
 </div>
@@ -282,7 +282,7 @@ body{background:var(--bg);color:var(--fg);}
         <button class="size-btn" onclick="selectSize(this,'L')">L<br><small style="font-size:10px;opacity:.6">20–35 kg</small></button>
         <button class="size-btn out">XL<br><small style="font-size:10px;opacity:.6">Agotado</small></button>
       </div>
-      <a class="size-guide-link" href="#" onclick="openSizeGuide();return false;">📏 Ver guía de tallas →</a>
+      <a class="size-guide-link" href="peludo-faq.html#tallas" onclick="openSizeGuide();return false;">📏 Ver guía de tallas →</a>
 
       <!-- CTAs -->
       <div class="cta-row">
@@ -301,7 +301,7 @@ body{background:var(--bg);color:var(--fg);}
       <!-- Loyalty -->
       <div class="loyalty-hint">
         <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        Gana <strong>14 puntos Peludo</strong> con esta compra · <a href="#" style="color:var(--accent)">¿Qué es Peludo Points?</a>
+        Gana <strong>14 puntos Peludo</strong> con esta compra · <a href="peludo-faq.html#cuenta" style="color:var(--accent)">¿Qué es Peludo Points?</a>
       </div>
 
     </div>
@@ -355,7 +355,7 @@ body{background:var(--bg);color:var(--fg);}
       <tr><td>L</td><td>20–35 kg</td><td>45–55 cm</td><td>Labrador, Golden, Pastor Alemán</td></tr>
       <tr><td>XL</td><td>35–50 kg</td><td>55–65 cm</td><td>Rottweiler, Dóberman, Gran Danés</td></tr>
     </table>
-    <p style="font-size:13px;color:var(--fg-subtle);margin-top:12px;">Si tu perro está entre dos tallas, elige la talla mayor. ¿Dudas? <a href="#" style="color:var(--accent)">Contacta con nosotros →</a></p>
+    <p style="font-size:13px;color:var(--fg-subtle);margin-top:12px;">Si tu perro está entre dos tallas, elige la talla mayor. ¿Dudas? <a href="peludo-contacto.html" style="color:var(--accent)">Contacta con nosotros →</a></p>
   </div>
 
   <div class="tab-panel" id="tab-reviews" id="reviews">
@@ -492,7 +492,7 @@ function setPricing(mode, btn) {
   const saPrice = document.getElementById('sa-price');
   if (mode === 'sub') {
     price.textContent = '12,74 €'; was.hidden = false; badge.hidden = false; saPrice.textContent = '12,74 €';
-    info.innerHTML = 'Suscripción mensual · Cancela cuando quieras · <a href="#" style="color:var(--accent)">Ver detalles →</a>';
+    info.innerHTML = 'Suscripción mensual · Cancela cuando quieras · <a href="peludo-faq.html" style="color:var(--accent)">Ver detalles →</a>';
   } else {
     price.textContent = '14,99 €'; was.hidden = true; badge.hidden = true; saPrice.textContent = '14,99 €';
     info.textContent = 'Precio sin compromiso. Añade al carrito y elige envío.';

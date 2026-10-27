@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contacto — Peludo</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap">
+<link rel="stylesheet" href="peludo-tokens.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);background:var(--bg);color:var(--fg);line-height:1.7;font-size:16px;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.nav-wrap{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--border);}
+.nav{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;gap:24px;}
+.nav-logo{font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--fg);text-decoration:none;display:flex;align-items:center;gap:6px;}
+.nav-logo span{color:var(--accent);}
+.nav-links{display:flex;gap:20px;margin-left:auto;}
+.nav-links a{font-size:14px;color:var(--fg-muted);text-decoration:none;}
+.nav-links a:hover{color:var(--fg);}
+.page-hero{background:var(--bg-alt);border-bottom:1px solid var(--border);padding:48px 24px 40px;}
+.wrap{max-width:1000px;margin:0 auto;}
+h1{font-family:var(--font-display);font-size:clamp(28px,5vw,42px);font-weight:700;line-height:1.2;margin-bottom:12px;}
+.hero-sub{color:var(--fg-muted);font-size:15px;}
+.content{max-width:1000px;margin:0 auto;padding:48px 24px 80px;display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:start;}
+@media(max-width:700px){.content{grid-template-columns:1fr;}}
+.form-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:32px;}
+.form-card h2{font-family:var(--font-display);font-size:22px;font-weight:700;margin-bottom:24px;}
+.field{margin-bottom:18px;}
+.field label{display:block;font-size:14px;font-weight:500;margin-bottom:6px;}
+.field input,.field select,.field textarea{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--r);font-size:15px;font-family:var(--font-body);background:var(--bg);color:var(--fg);transition:border-color .15s;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);}
+.field textarea{resize:vertical;min-height:130px;}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.submit-btn{width:100%;padding:13px;background:var(--accent);color:var(--accent-fg);border:none;border-radius:var(--r);font-size:16px;font-weight:600;cursor:pointer;font-family:var(--font-body);transition:opacity .15s;}
+.submit-btn:hover{opacity:.9;}
+.success-msg{display:none;text-align:center;padding:32px 20px;}
+.success-msg .icon{font-size:48px;margin-bottom:12px;}
+.success-msg h3{font-family:var(--font-display);font-size:22px;font-weight:700;margin-bottom:8px;}
+.success-msg p{color:var(--fg-muted);}
+.info-col h2{font-family:var(--font-display);font-size:22px;font-weight:700;margin-bottom:24px;}
+.info-block{background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r);padding:20px 24px;margin-bottom:16px;}
+.info-block h3{font-size:15px;font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.info-block p{font-size:14px;color:var(--fg-muted);margin:0;}
+.info-block a{color:var(--accent);}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:8px;font-size:13px;}
+.hours-grid .day{color:var(--fg-muted);}
+.hours-grid .time{font-weight:500;}
+.quick-links{margin-top:32px;}
+.quick-links h3{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--fg-subtle);margin-bottom:12px;}
+.quick-link{display:flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid var(--border);border-radius:var(--r);margin-bottom:8px;color:var(--fg);text-decoration:none;transition:border-color .15s;}
+.quick-link:hover{border-color:var(--accent);color:var(--accent);}
+.quick-link span{font-size:20px;}
+.quick-link .ql-text small{display:block;font-size:12px;color:var(--fg-subtle);}
+footer{background:var(--fg);color:var(--bg);padding:32px 24px;text-align:center;font-size:13px;}
+footer a{color:var(--accent);text-decoration:none;}
+</style>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav class="nav">
+    <a class="nav-logo" href="index.html"><span>●</span> Peludo</a>
+    <div class="nav-links">
+      <a href="index.html">Tienda</a>
+      <a href="peludo-faq.html">FAQ</a>
+    </div>
+  </nav>
+</div>
+
+<div class="page-hero">
+  <div class="wrap">
+    <h1>Contacto</h1>
+    <p class="hero-sub">Estamos aquí para ayudarte · Respuesta en menos de 24 horas</p>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="form-card">
+    <h2>Envíanos un mensaje</h2>
+    <div id="contact-form">
+      <div class="field-row">
+        <div class="field">
+          <label for="cf-nombre">Nombre</label>
+          <input type="text" id="cf-nombre" placeholder="Tu nombre">
+        </div>
+        <div class="field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" placeholder="tu@email.com">
+        </div>
+      </div>
+      <div class="field">
+        <label for="cf-pedido">Número de pedido (opcional)</label>
+        <input type="text" id="cf-pedido" placeholder="PLD-2024-XXXX">
+      </div>
+      <div class="field">
+        <label for="cf-asunto">Motivo de consulta</label>
+        <select id="cf-asunto">
+          <option value="">Selecciona un motivo…</option>
+          <option>Pregunta sobre un producto</option>
+          <option>Estado de mi pedido</option>
+          <option>Iniciar una devolución</option>
+          <option>Problema con el pedido recibido</option>
+          <option>Cambio de talla</option>
+          <option>Colaboración o prensa</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="cf-msg">Mensaje</label>
+        <textarea id="cf-msg" placeholder="Cuéntanos cómo podemos ayudarte…"></textarea>
+      </div>
+      <button class="submit-btn" onclick="sendForm()">Enviar mensaje →</button>
+    </div>
+    <div class="success-msg" id="success-msg">
+      <div class="icon">🐾</div>
+      <h3>¡Mensaje recibido!</h3>
+      <p>Gracias por contactar con Peludo. Te responderemos en menos de 24 horas en el email indicado.</p>
+    </div>
+  </div>
+
+  <div class="info-col">
+    <h2>Otros canales</h2>
+
+    <div class="info-block">
+      <h3>📧 Email</h3>
+      <p><a href="mailto:hola@peludo.es">hola@peludo.es</a> — consultas generales<br>
+      <a href="mailto:devoluciones@peludo.es">devoluciones@peludo.es</a> — devoluciones</p>
+    </div>
+
+    <div class="info-block">
+      <h3>📞 Teléfono</h3>
+      <p><strong>+34 900 000 000</strong> (gratuito)<br>
+      <div class="hours-grid">
+        <span class="day">Lunes–Viernes</span><span class="time">9:00–18:00</span>
+        <span class="day">Sábado</span><span class="time">10:00–14:00</span>
+        <span class="day">Festivos</span><span class="time">Cerrado</span>
+      </div></p>
+    </div>
+
+    <div class="info-block">
+      <h3>💬 Chat en vivo</h3>
+      <p>Disponible en la tienda de lunes a viernes de 9:00 a 17:00 h. Busca el icono de chat en la esquina inferior derecha.</p>
+    </div>
+
+    <div class="info-block">
+      <h3>📍 Dirección</h3>
+      <p>Peludo Accesorios S.L.<br>
+      Calle de los Perros, 42<br>
+      28001 Madrid, España<br>
+      <em style="font-size:12px;color:var(--fg-subtle);">Solo correspondencia, no hay tienda física.</em></p>
+    </div>
+
+    <div class="quick-links">
+      <h3>Accesos rápidos</h3>
+      <a class="quick-link" href="peludo-devoluciones.html">
+        <span>📦</span>
+        <div class="ql-text">Seguir mi pedido <small>Introduce tu número de pedido</small></div>
+      </a>
+      <a class="quick-link" href="peludo-devoluciones.html#tab-devoluciones">
+        <span>↩</span>
+        <div class="ql-text">Iniciar una devolución <small>Proceso en 4 pasos sencillos</small></div>
+      </a>
+      <a class="quick-link" href="peludo-faq.html">
+        <span>❓</span>
+        <div class="ql-text">Preguntas frecuentes <small>Respuestas inmediatas</small></div>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2024 Peludo ·
+    <a href="peludo-privacidad.html">Privacidad</a> ·
+    <a href="peludo-terminos.html">Términos</a> ·
+    <a href="peludo-contacto.html">Contacto</a>
+  </p>
+</footer>
+
+<script>
+function sendForm() {
+  const nombre = document.getElementById('cf-nombre').value.trim();
+  const email = document.getElementById('cf-email').value.trim();
+  const msg = document.getElementById('cf-msg').value.trim();
+  if (!nombre || !email || !msg) {
+    alert('Por favor, rellena los campos obligatorios: nombre, email y mensaje.');
+    return;
+  }
+  document.getElementById('contact-form').style.display = 'none';
+  document.getElementById('success-msg').style.display = 'block';
+}
+</script>
+
+</body>
+</html>

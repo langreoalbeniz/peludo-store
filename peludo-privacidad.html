@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Política de Privacidad — Peludo</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap">
+<link rel="stylesheet" href="peludo-tokens.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);background:var(--bg);color:var(--fg);line-height:1.7;font-size:16px;}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.nav-wrap{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid var(--border);}
+.nav{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;gap:24px;}
+.nav-logo{font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--fg);text-decoration:none;display:flex;align-items:center;gap:6px;}
+.nav-logo span{color:var(--accent);}
+.nav-links{display:flex;gap:20px;margin-left:auto;}
+.nav-links a{font-size:14px;color:var(--fg-muted);text-decoration:none;}
+.nav-links a:hover{color:var(--fg);}
+.page-hero{background:var(--bg-alt);border-bottom:1px solid var(--border);padding:48px 24px 40px;}
+.page-hero .wrap{max-width:800px;margin:0 auto;}
+.page-hero h1{font-family:var(--font-display);font-size:clamp(28px,5vw,42px);font-weight:700;line-height:1.2;margin-bottom:12px;}
+.page-hero p{color:var(--fg-muted);font-size:15px;}
+.content{max-width:800px;margin:0 auto;padding:48px 24px 80px;}
+.content h2{font-family:var(--font-display);font-size:22px;font-weight:700;margin:40px 0 12px;color:var(--fg);}
+.content h2:first-child{margin-top:0;}
+.content h3{font-size:16px;font-weight:600;margin:24px 0 8px;}
+.content p{margin-bottom:14px;color:var(--fg-muted);}
+.content ul{margin:0 0 14px 20px;color:var(--fg-muted);}
+.content ul li{margin-bottom:6px;}
+.content table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:14px;}
+.content table th{background:var(--bg-alt);padding:10px 14px;text-align:left;font-weight:600;border:1px solid var(--border);}
+.content table td{padding:10px 14px;border:1px solid var(--border);color:var(--fg-muted);}
+.info-box{background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r);padding:20px 24px;margin:24px 0;}
+.info-box strong{display:block;margin-bottom:6px;}
+footer{background:var(--fg);color:var(--bg);padding:32px 24px;text-align:center;font-size:13px;}
+footer a{color:var(--accent);text-decoration:none;}
+</style>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav class="nav">
+    <a class="nav-logo" href="index.html"><span>●</span> Peludo</a>
+    <div class="nav-links">
+      <a href="index.html">Tienda</a>
+      <a href="peludo-contacto.html">Contacto</a>
+    </div>
+  </nav>
+</div>
+
+<div class="page-hero">
+  <div class="wrap">
+    <h1>Política de Privacidad</h1>
+    <p>Última actualización: 1 de octubre de 2024 · Vigente desde: 1 de octubre de 2024</p>
+  </div>
+</div>
+
+<div class="content">
+
+  <h2>1. Responsable del tratamiento</h2>
+  <p>En cumplimiento del Reglamento (UE) 2016/679 del Parlamento Europeo (RGPD) y la Ley Orgánica 3/2018 de Protección de Datos (LOPDGDD), te informamos:</p>
+  <div class="info-box">
+    <strong>Peludo Accesorios S.L. (demo)</strong>
+    Calle de los Perros, 42 · 28001 Madrid, España<br>
+    CIF: B-00000000 (ficticio, demo)<br>
+    Email: <a href="mailto:privacidad@peludo.es">privacidad@peludo.es</a><br>
+    Teléfono: +34 900 000 000
+  </div>
+
+  <h2>2. Datos que recopilamos</h2>
+  <p>Recogemos los datos que tú mismo nos proporcionas en los siguientes supuestos:</p>
+  <ul>
+    <li><strong>Compra:</strong> nombre, apellidos, dirección de entrega y facturación, email, teléfono y datos de pago (procesados por Stripe, nunca almacenados en nuestros servidores).</li>
+    <li><strong>Cuenta de usuario:</strong> email y contraseña (hash bcrypt).</li>
+    <li><strong>Suscripción al boletín:</strong> email y preferencias de comunicación.</li>
+    <li><strong>Contacto:</strong> nombre, email y contenido del mensaje.</li>
+    <li><strong>Navegación:</strong> datos técnicos de acceso (IP anonimizada, navegador, páginas visitadas) mediante cookies analíticas con tu consentimiento.</li>
+  </ul>
+
+  <h2>3. Finalidad y base jurídica</h2>
+  <table>
+    <tr><th>Finalidad</th><th>Base jurídica</th><th>Plazo</th></tr>
+    <tr><td>Gestión de pedidos y envíos</td><td>Ejecución del contrato (art. 6.1.b RGPD)</td><td>5 años (obligación fiscal)</td></tr>
+    <tr><td>Atención al cliente</td><td>Interés legítimo (art. 6.1.f RGPD)</td><td>2 años</td></tr>
+    <tr><td>Email marketing</td><td>Consentimiento (art. 6.1.a RGPD)</td><td>Hasta retirada del consentimiento</td></tr>
+    <tr><td>Análisis web (cookies)</td><td>Consentimiento (art. 6.1.a RGPD)</td><td>13 meses</td></tr>
+    <tr><td>Prevención del fraude</td><td>Interés legítimo (art. 6.1.f RGPD)</td><td>1 año</td></tr>
+  </table>
+
+  <h2>4. Destinatarios de los datos</h2>
+  <p>Tus datos pueden ser comunicados a los siguientes terceros, con las garantías adecuadas:</p>
+  <ul>
+    <li><strong>BigBuy Europe S.L.</strong> — proveedor logístico y de dropshipping, para la gestión de envíos.</li>
+    <li><strong>Stripe Payments Europe Ltd.</strong> — procesador de pagos con tarjeta.</li>
+    <li><strong>Mailchimp (Intuit Inc.)</strong> — envío de comunicaciones comerciales (solo si has dado tu consentimiento).</li>
+    <li><strong>Google LLC</strong> — analítica web (Google Analytics 4, con IP anonimizada y sin transferencia a terceros países sin garantías).</li>
+    <li><strong>Autoridades competentes</strong> — cuando sea legalmente exigible.</li>
+  </ul>
+
+  <h2>5. Tus derechos</h2>
+  <p>En virtud del RGPD, tienes derecho a:</p>
+  <ul>
+    <li><strong>Acceso:</strong> solicitar copia de los datos que tratamos sobre ti.</li>
+    <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
+    <li><strong>Supresión («derecho al olvido»):</strong> solicitar la eliminación de tus datos cuando ya no sean necesarios.</li>
+    <li><strong>Oposición:</strong> oponerte al tratamiento basado en interés legítimo o para marketing directo.</li>
+    <li><strong>Limitación:</strong> solicitar que suspendamos el tratamiento en determinadas circunstancias.</li>
+    <li><strong>Portabilidad:</strong> recibir tus datos en formato estructurado y de uso común.</li>
+    <li><strong>Retirada del consentimiento</strong> en cualquier momento, sin que ello afecte a la licitud del tratamiento previo.</li>
+  </ul>
+  <p>Para ejercer tus derechos, escríbenos a <a href="mailto:privacidad@peludo.es">privacidad@peludo.es</a> con asunto «RGPD — [Derecho que ejerces]» adjuntando copia de tu DNI o documento identificativo. Responderemos en el plazo máximo de 30 días. También puedes presentar una reclamación ante la <strong>Agencia Española de Protección de Datos</strong> (<a href="https://www.aepd.es" target="_blank">aepd.es</a>).</p>
+
+  <h2>6. Política de cookies</h2>
+  <p>Utilizamos cookies propias y de terceros. Puedes gestionar tus preferencias en cualquier momento desde el panel de cookies.</p>
+  <table>
+    <tr><th>Cookie</th><th>Tipo</th><th>Finalidad</th><th>Duración</th></tr>
+    <tr><td>peludo_session</td><td>Técnica (necesaria)</td><td>Mantener sesión de usuario y carrito</td><td>Sesión</td></tr>
+    <tr><td>peludo_consent</td><td>Técnica (necesaria)</td><td>Guardar preferencias de cookies</td><td>13 meses</td></tr>
+    <tr><td>_ga, _ga_*</td><td>Analítica</td><td>Google Analytics — estadísticas de uso</td><td>13 meses</td></tr>
+    <tr><td>_fbp</td><td>Marketing</td><td>Meta Pixel — retargeting publicitario</td><td>3 meses</td></tr>
+    <tr><td>stripe_*</td><td>Técnica (necesaria)</td><td>Prevención del fraude en pagos</td><td>Sesión</td></tr>
+  </table>
+  <p>Puedes configurar tu navegador para bloquear o alertar sobre cookies. Ten en cuenta que desactivar cookies técnicas puede afectar a la funcionalidad de la tienda.</p>
+
+  <h2>7. Seguridad</h2>
+  <p>Aplicamos medidas técnicas y organizativas adecuadas al riesgo: cifrado TLS en todas las comunicaciones, acceso restringido a los datos por parte del personal, controles de acceso con autenticación de dos factores, y auditorías periódicas de seguridad.</p>
+
+  <h2>8. Cambios en esta política</h2>
+  <p>Nos reservamos el derecho de actualizar esta política. Te notificaremos cambios relevantes por email o mediante aviso destacado en la tienda con al menos 30 días de antelación.</p>
+
+</div>
+
+<footer>
+  <p>© 2024 Peludo Accesorios S.L. ·
+    <a href="peludo-privacidad.html">Privacidad</a> ·
+    <a href="peludo-terminos.html">Términos</a> ·
+    <a href="peludo-contacto.html">Contacto</a>
+  </p>
+</footer>
+
+</body>
+</html>
